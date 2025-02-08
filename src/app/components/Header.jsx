@@ -7,7 +7,11 @@ export function Header() {
     const pathname = usePathname()
 
     return (
-        <nav className="bg-blue-400 flex justify-center items-center py-2 gap-5 font-bold">
+        <nav className="bg-gray-300 flex justify-between p-2 items-center gap-5 font-bold">
+            <div>
+            <h1 className="text-2xl">SE.BLOG</h1>
+            </div>
+            <div className="flex gap-5 pr-10">
             <Link className={`link ${pathname === '/' ? "active underline" : ""}`} href='/'>
                 Home
             </Link>
@@ -27,6 +31,7 @@ export function Header() {
             <Link className={`link ${pathname === '/contact' ? "active underline" : ""}`} href='/contact'>
                 ContactUs
             </Link>
+            </div>
         </nav>
     )
 }
